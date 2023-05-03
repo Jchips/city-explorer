@@ -1,0 +1,36 @@
+header {
+  background-color: blue;
+  color: white;
+  padding: 20px;
+  border-bottom-left-radius: 20px;
+  border-bottom-right-radius: 20px;
+}
+
+form,
+form > div {
+  display: flex;
+  margin: 10px;
+  justify-content: center;
+  align-items: center;
+}
+
+.form-label {
+  width: 120px;
+  margin-bottom: 0;
+  font-weight: 500;
+}
+
+p,
+.h5 {
+  text-align: center;
+}
+
+.h5 {
+  margin-top: 10px;
+}
+
+.card {
+  width: 28rem;
+  margin: 20px auto;
+  border: 1px solid blue;
+}
