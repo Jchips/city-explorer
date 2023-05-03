@@ -20,7 +20,7 @@ class App extends Component {
   handleSubmit = async (e) => {
     e.preventDefault();
     let url = `https://us1.locationiq.com/v1/search?key=${process.env.REACT_APP_LOCATION_KEY}&q=${this.state.city}&format=json`;
-    const data = await axios
+    await axios
       .get(url)
       .then((response) => {
         this.setState({ usersData: response.data[0]});
