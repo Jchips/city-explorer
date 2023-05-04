@@ -40,7 +40,7 @@ class App extends Component {
     return (
       <div>
         <header>
-          <h1>LocationIQ API</h1>
+          <h1>City Explorer</h1>
         </header>
         <div className="container">
           <Form onSubmit={this.handleSubmit}>

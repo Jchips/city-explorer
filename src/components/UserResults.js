@@ -14,12 +14,10 @@ class UserResults extends Component {
               alt={`map of ${this.props.usersData["display_name"]}`}
             ></Card.Img>
             <Card.Title>{this.props.usersData["display_name"]}</Card.Title>
-            {/* <Card.Text>{this.props.usersData["display_name"]}</Card.Text> */}
             <Card.Text>
               Longitude: {this.props.usersData.lon} &nbsp; Latitude:{" "}
               {this.props.usersData.lat}
             </Card.Text>
-            <Card.Text></Card.Text>
             {/* <Button variant="primary">Go somewhere</Button> */}
           </Card.Body>
         </Card>
