@@ -1,6 +1,7 @@
-# Project Name
+# City Explorer
 
 **Author**: Jelani Rhinehart
+
 **Version**: 1.0.0 (increment the patch/fix version number if you make more commits past your first submission)
 
 ## Overview
@@ -19,25 +20,45 @@ Steps:
 ## Architecture
 <!-- Provide a detailed description of the application design. What technologies (languages, libraries, etc) you're using, and any other relevant design information. -->
 
+This app is built with React.js using the LocationIQ API.
+
+![API Data flow example](/public/assets/imgs/api-data-flow.png)
+
 ## Change Log
 <!-- Use this area to document the iterative changes made to your application as each feature is successfully implemented. Use time stamps. Here's an example:
 
 01-01-2001 4:59pm - Application now has a fully-functional express server, with a GET route for the location resource. -->
+
+05-03-2023 8:00pm - Application uses API to display city locations and a map.
 
 ## Credit and Collaborations
 <!-- Give credit (and a link) to other people or resources that helped you build this application. -->
 
 ## Features
 
-Name of feature: Setup React Repository
+### Name of feature: Setup React Repository and API keys
 
 Estimate of time needed to complete: 30min
 
-Start time: _____
+Actual time needed to complete: About 1 hour
 
-Finish time: _____
+### Name of feature: Locations
 
-Actual time needed to complete: _____
+Estimate of time needed to complete: 1 hour
+
+Actual time needed to complete: About 1 hour
+
+### Name of feature: Map
+
+Estimate of time needed to complete: At least 45 minutes
+
+Actual time needed to complete: About 20 mins max
+
+### Name of feature: Errors
+
+Estimate of time needed to complete: 30 minutes
+
+Actual time needed to complete: About 30 minutes minimum
 
 ## Getting Started with Create React App
 
