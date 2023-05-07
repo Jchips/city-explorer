@@ -1,5 +1,25 @@
+.weather {
+  margin: 20px;
+}
+
+.weather h2 {
+  text-align: center;
+  text-transform: capitalize;
+  background-color: blue;
+  color: white;
+  padding: 10px 20px;
+  border-radius: 10px;
+  width: fit-content;
+  margin: auto auto;
+}
+
 .weather .cards {
   display: flex;
   flex-direction: row;
   justify-content: center;
+}
+
+.weather .card {
+  padding: 20px;
+  margin: 10px;
 }

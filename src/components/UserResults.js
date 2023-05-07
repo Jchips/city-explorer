@@ -3,15 +3,9 @@ import { Card } from "react-bootstrap";
 // import Weather from "./Weather";
 
 class UserResults extends Component {
-  // constructor(props) {
-  //   super(props);
-  //   this.state = {
-  //     showWeatherData: false
-  //   }
-  // }
   render() {
     return (
-      <div>
+      <div className="user-results">
         <p>Entered city: {this.props.city}</p>
         <Card>
           <Card.Body>

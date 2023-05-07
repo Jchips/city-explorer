@@ -43,7 +43,7 @@ class App extends Component {
     try {
       await axios
         .get(
-          `${process.env.REACT_APP_SERVER}/weather?searchQuery=${this.state.city}`
+          `${process.env.REACT_APP_SERVER}/weather?searchQuery=${this.capitalize(this.state.city)}`
         )
         .then((response) => {
           this.setState(
@@ -59,9 +59,13 @@ class App extends Component {
       console.error(error.message);
     }
   };
+
+  capitalize = (word) => {
+    let firstLetter = word.slice(0, 1).toUpperCase();
+    let restOfWord = word.slice(1);
+    return firstLetter + restOfWord;
+  }
   render() {
-    // console.log(this.state.usersData);
-    // console.log(this.state.error);
     return (
       <div>
         <header>
@@ -100,10 +104,9 @@ class App extends Component {
             <p>Sorry there is no weather data available for this city</p>
           ) : null}
 
-          {/* {console.log(this.state.weatherData)} */}
 
           {this.state.weatherData.length > 0 && !this.state.weatherError ? (
-            <Weather weatherData={this.state.weatherData} />
+            <Weather weatherData={this.state.weatherData} city={this.state.city}/>
           ) : null}
         </div>
       </div>
