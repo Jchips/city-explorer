@@ -3,6 +3,7 @@ import { Form, Button } from "react-bootstrap";
 import axios from "axios";
 import UserResults from "./components/UserResults";
 import "./style/App.css";
+import Weather from "./components/Weather/Weather";
 
 class App extends Component {
   constructor(props) {
@@ -11,6 +12,8 @@ class App extends Component {
       city: "",
       usersData: [],
       error: false,
+      weatherData: [],
+      weatherError: false,
     };
   }
 
@@ -24,8 +27,8 @@ class App extends Component {
     await axios
       .get(url)
       .then((response) => {
-        this.setState({ usersData: response.data[0] });
-        this.setState({ error: false });
+        this.setState({ usersData: response.data[0], error: false });
+        // this.setState({ error: false });
       })
       .catch(() => {
         console.error();
@@ -33,6 +36,28 @@ class App extends Component {
       });
     // const response = await axios.get(url)
     // console.log(response.data);
+    this.showWeatherData();
+  };
+
+  showWeatherData = async () => {
+    try {
+      await axios
+        .get(
+          `${process.env.REACT_APP_SERVER}/weather?searchQuery=${this.state.city}`
+        )
+        .then((response) => {
+          this.setState(
+            { weatherData: response.data, weatherError: false },
+            () => console.log(this.state.weatherData)
+          );
+        })
+        .catch(() => {
+          console.error();
+          this.setState({ weatherError: true });
+        });
+    } catch (error) {
+      console.error(error.message);
+    }
   };
   render() {
     // console.log(this.state.usersData);
@@ -70,6 +95,16 @@ class App extends Component {
           ) : (
             <p>Please enter a city</p>
           )}
+
+          {this.state.weatherError ? (
+            <p>Sorry there is no weather data available for this city</p>
+          ) : null}
+
+          {/* {console.log(this.state.weatherData)} */}
+
+          {this.state.weatherData.length > 0 && !this.state.weatherError ? (
+            <Weather weatherData={this.state.weatherData} />
+          ) : null}
         </div>
       </div>
     );

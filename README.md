@@ -22,6 +22,7 @@ Steps:
 
 This app is built with React.js using the LocationIQ API.
 
+![Server data flow example](/public/assets/imgs/server-data-flow.png)
 ![API Data flow example](/public/assets/imgs/api-data-flow.png)
 
 ## Change Log
