@@ -14,7 +14,7 @@ class Weather extends Component {
     let city = this.props.city;
     return (
       <div className='weather'>
-        <h2>{city} Weather Data 🌤️</h2>
+        <h3>{city} Weather Data 🌤️</h3>
         <section className='cards'>
           {weatherData.map(day =>
             <Card key={day.date}>

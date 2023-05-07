@@ -20,6 +20,40 @@ form > div {
   font-weight: 500;
 }
 
+main {
+  margin: 20px;
+}
+
+.alert-info {
+  height: fit-content;
+}
+
+.api-data-container {
+  display: flex;
+  justify-content: space-around;
+  margin: 20px 0;
+}
+
+.api-data-container > * {
+  margin: 5px;
+}
+
+h2 {
+  text-align: center;
+  text-transform: capitalize;
+  background-color: rgb(84, 84, 213);
+  color: white;
+  padding: 10px 20px;
+  border-radius: 10px;
+  width: fit-content;
+  margin: auto auto;
+}
+
+h3 {
+  text-align: center;
+  text-transform: capitalize;
+}
+
 p,
 .h5 {
   text-align: center;

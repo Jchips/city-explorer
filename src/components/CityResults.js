@@ -2,11 +2,12 @@ import React, { Component } from "react";
 import { Card } from "react-bootstrap";
 // import Weather from "./Weather";
 
-class UserResults extends Component {
+class CityResults extends Component {
   render() {
+    // const city = this.props.city;
     return (
       <div className="user-results">
-        <p>Entered city: {this.props.city}</p>
+        <h3>Map</h3>
         <Card>
           <Card.Body>
             <Card.Img
@@ -29,4 +30,4 @@ class UserResults extends Component {
   }
 }
 
-export default UserResults;
+export default CityResults;
