@@ -1,11 +1,13 @@
 import React, { Component } from "react";
 import { Card } from "react-bootstrap";
+// import Weather from "./Weather";
 
-class UserResults extends Component {
+class CityResults extends Component {
   render() {
+    // const city = this.props.city;
     return (
-      <div>
-        <p>Entered city: {this.props.city}</p>
+      <div className="user-results">
+        <h3>Map</h3>
         <Card>
           <Card.Body>
             <Card.Img
@@ -18,7 +20,9 @@ class UserResults extends Component {
               Longitude: {this.props.usersData.lon} &nbsp; Latitude:{" "}
               {this.props.usersData.lat}
             </Card.Text>
-            {/* <Button variant="primary">Go somewhere</Button> */}
+            {/* <Button variant="primary" onClick={this.setState({showWeatherData: true})}>Show weather data</Button> */}
+            
+            {/* {this.state.showWeatherData ? <Weather weatherData={this.state.weatherData}/> : null} */}
           </Card.Body>
         </Card>
       </div>
@@ -26,4 +30,4 @@ class UserResults extends Component {
   }
 }
 
-export default UserResults;
+export default CityResults;

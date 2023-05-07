@@ -2,7 +2,7 @@
 
 **Author**: Jelani Rhinehart
 
-**Version**: 1.0.0 (increment the patch/fix version number if you make more commits past your first submission)
+**Version**: 2.0.0 (increment the patch/fix version number if you make more commits past your first submission)
 
 ## Overview
 <!-- Provide a high level overview of what this application is and why you are building it, beyond the fact that it's an assignment for this class. (i.e. What's your problem domain?) -->
@@ -22,6 +22,7 @@ Steps:
 
 This app is built with React.js using the LocationIQ API.
 
+![Server data flow example](/public/assets/imgs/server-data-flow.png)
 ![API Data flow example](/public/assets/imgs/api-data-flow.png)
 
 ## Change Log
@@ -30,6 +31,7 @@ This app is built with React.js using the LocationIQ API.
 01-01-2001 4:59pm - Application now has a fully-functional express server, with a GET route for the location resource. -->
 
 05-03-2023 8:00pm - Application uses API to display city locations and a map.
+05-06-2013 9:31pm - Improved application UI. Application now displays weather data for limited number of cities.
 
 ## Credit and Collaborations
 <!-- Give credit (and a link) to other people or resources that helped you build this application. -->
