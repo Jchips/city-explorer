@@ -16,7 +16,7 @@ form > div {
 
 .form-label {
   width: 120px;
-  margin-bottom: 0;
+  margin-bottom: 0 !important;
   font-weight: 500;
 }
 

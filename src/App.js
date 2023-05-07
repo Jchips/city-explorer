@@ -1,5 +1,5 @@
 import React, { Component } from "react";
-import { Form, Button } from "react-bootstrap";
+import { Form, Button, Alert } from "react-bootstrap";
 import axios from "axios";
 import UserResults from "./components/UserResults";
 import "./style/App.css";
@@ -43,7 +43,9 @@ class App extends Component {
     try {
       await axios
         .get(
-          `${process.env.REACT_APP_SERVER}/weather?searchQuery=${this.capitalize(this.state.city)}`
+          `${
+            process.env.REACT_APP_SERVER
+          }/weather?searchQuery=${this.capitalize(this.state.city)}`
         )
         .then((response) => {
           this.setState(
@@ -64,7 +66,7 @@ class App extends Component {
     let firstLetter = word.slice(0, 1).toUpperCase();
     let restOfWord = word.slice(1);
     return firstLetter + restOfWord;
-  }
+  };
   render() {
     return (
       <div>
@@ -87,27 +89,29 @@ class App extends Component {
             </Button>
           </Form>
           {/* If there is an error, let the user know. Otherwise, show them the info on their city*/}
-          {this.state.error ? (
-            <p>
+          {this.state.error && (
+            <Alert variant="danger">
               Sorry, we couldn't process what you inputted. Please try again.
-            </p>
-          ) : this.state.usersData["place_id"] ? (
+            </Alert>
+          )}
+
+          {(this.state.usersData["place_id"] && !this.state.error) && (
             <UserResults
               usersData={this.state.usersData}
               city={this.state.city}
             />
-          ) : (
-            <p>Please enter a city</p>
           )}
 
-          {this.state.weatherError ? (
+          {this.state.weatherError && (
             <p>Sorry there is no weather data available for this city</p>
-          ) : null}
+          )}
 
-
-          {this.state.weatherData.length > 0 && !this.state.weatherError ? (
-            <Weather weatherData={this.state.weatherData} city={this.state.city}/>
-          ) : null}
+          {(this.state.weatherData.length > 0 && !this.state.weatherError) && (
+            <Weather
+              weatherData={this.state.weatherData}
+              city={this.state.city}
+            />
+          )}
         </div>
       </div>
     );
