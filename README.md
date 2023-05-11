@@ -38,10 +38,10 @@ Loading image appears when map is first loading.
 ## Credit and Collaborations
 <!-- Give credit (and a link) to other people or resources that helped you build this application. -->
 
-- [isLoading code help from ChatGPT]('https://chat.openai.com/')
-- [City image from Sean Pollock on Unsplash]('https://unsplash.com/photos/PhYq704ffdA')
-- [Hero image inspired and helped by thankfulregistry.com site]('https://thankfulregistry.com/')
-- [Globe spinning gif from Wikipedia Commons]('https://upload.wikimedia.org/wikipedia/commons/a/a9/Rotating_earth_%28large%29_transparent.gif')
+- [isLoading code help from ChatGPT](https://chat.openai.com/)
+- [City image from Sean Pollock on Unsplash](https://unsplash.com/photos/PhYq704ffdA)
+- [Hero image inspired and helped by thankfulregistry.com site](https://thankfulregistry.com/)
+- [Globe spinning gif from Wikipedia Commons](https://upload.wikimedia.org/wikipedia/commons/a/a9/Rotating_earth_%28large%29_transparent.gif)
 
 ## Features
 
