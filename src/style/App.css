@@ -2,8 +2,8 @@ header {
   background-color: blue;
   color: white;
   padding: 20px;
-  border-bottom-left-radius: 20px;
-  border-bottom-right-radius: 20px;
+  /* border-bottom-left-radius: 20px;
+  border-bottom-right-radius: 20px; */
 }
 
 form,
@@ -28,13 +28,13 @@ main {
   height: fit-content;
 }
 
-.api-data-container {
+.map-weather-container {
   display: flex;
   justify-content: space-around;
   margin: 20px 0;
 }
 
-.api-data-container > * {
+.map-weather-container > * {
   margin: 5px;
 }
 
@@ -54,13 +54,9 @@ h3 {
   text-transform: capitalize;
 }
 
-p,
+/* p, */
 .h5 {
   text-align: center;
-}
-
-.user-results .card-title {
-  margin-top: 10px !important;
 }
 
 .card {
