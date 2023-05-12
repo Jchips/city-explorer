@@ -2,7 +2,7 @@
 
 **Author**: Jelani Rhinehart
 
-**Version**: 2.0.0 (increment the patch/fix version number if you make more commits past your first submission)
+**Version**: 3.0.0 (increment the patch/fix version number if you make more commits past your first submission)
 
 ## Overview
 <!-- Provide a high level overview of what this application is and why you are building it, beyond the fact that it's an assignment for this class. (i.e. What's your problem domain?) -->
@@ -30,11 +30,18 @@ This app is built with React.js using the LocationIQ API.
 
 01-01-2001 4:59pm - Application now has a fully-functional express server, with a GET route for the location resource. -->
 
-05-03-2023 8:00pm - Application uses API to display city locations and a map.
-05-06-2013 9:31pm - Improved application UI. Application now displays weather data for limited number of cities.
+- 05-03-2023 8:00pm - Application uses API to display city locations and a map.
+- 05-06-2023 9:31pm - Improved application UI. Application now displays weather data for limited number of cities.
+- 05-10-2023 8:31pm - Improved application UI. Shows movies with the searched city in their title name.
+Loading image appears when map is first loading.
 
 ## Credit and Collaborations
 <!-- Give credit (and a link) to other people or resources that helped you build this application. -->
+
+- [isLoading code help from ChatGPT](https://chat.openai.com/)
+- [City image from Sean Pollock on Unsplash](https://unsplash.com/photos/PhYq704ffdA)
+- [Hero image inspired and helped by thankfulregistry.com site](https://thankfulregistry.com/)
+- [Globe spinning gif from Wikipedia Commons](https://upload.wikimedia.org/wikipedia/commons/a/a9/Rotating_earth_%28large%29_transparent.gif)
 
 ## Features
 

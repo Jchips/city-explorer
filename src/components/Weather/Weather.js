@@ -5,8 +5,8 @@ import './Weather.css';
 class Weather extends Component {
 
   displayDate = (date) => {
+    date = date.slice(0, 11);
     const display = new Date(date).toString();
-    console.log('date: ', display);
     return display.slice(4, 15);
   }
   render() {

@@ -12,3 +12,7 @@
   padding: 20px;
   margin: 10px;
 }
+
+.weather .card-text {
+  text-align: center;
+}
