@@ -23,35 +23,31 @@ class App extends Component {
     this.setState({ city: e.target.value });
   };
 
-  handleSubmit = async (e) => {
+  handleSubmit = (e) => {
     e.preventDefault();
     let url = `https://us1.locationiq.com/v1/search?key=${process.env.REACT_APP_LOCATION_KEY}&q=${this.state.city}&format=json`;
-    await axios
+    axios
       .get(url)
       .then((response) => {
-        this.setState({ usersData: response.data[0], cityError: false });
+        this.setState({ usersData: response.data[0], cityError: false })
+        this.showWeatherData();
+        this.showMovieData();
       })
       .catch(() => {
         console.error();
-        this.setState({ cityError: true });
+        this.setState({ cityError: true, weatherError: true, movieError: true });
       });
     // const response = await axios.get(url)
     // console.log(response.data);
-    this.showWeatherData();
-    this.showMovieData();
+    
   };
 
-  showWeatherData = async () => {
-    await axios
+  showWeatherData = () => {
+    axios
       .get(`${process.env.REACT_APP_SERVER}/weather?searchQuery=${this.capitalize(this.state.city)}`)
-      .then((response) => {
-        this.setState(
-          { weatherData: response.data, weatherError: false },
-          () => console.log(this.state.weatherData)
-        );
-      })
-      .catch(() => {
-        console.error();
+      .then((response) => this.setState({ weatherData: response.data, weatherError: false }, () => console.log(this.state.weatherData)))
+      .catch((error) => {
+        console.error(error);
         this.setState({ weatherError: true });
       });
   };
@@ -59,10 +55,11 @@ class App extends Component {
   showMovieData = () => {
     axios
       .get(`${process.env.REACT_APP_SERVER}/movies?searchQuery=${this.capitalize(this.state.city)}`)
-      .then(response => {
-        this.setState({movieData: response.data, movieError: false}, () => console.log(this.state.movieData));
-      })
-      .catch(error => console.error(error));
+      .then(response => this.setState({movieData: response.data, movieError: false}, () => console.log(this.state.movieData)))
+      .catch(error => {
+        console.error(error);
+        this.setState({ movieError: true });
+      });
   }
 
   capitalize = (word) => {
