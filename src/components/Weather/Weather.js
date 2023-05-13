@@ -9,21 +9,30 @@ class Weather extends Component {
     const display = new Date(date).toString();
     return display.slice(4, 15);
   }
+  
   render() {
-    let weatherData = this.props.weatherData;
-    let city = this.props.city;
+    const {weatherData, city} = this.props;
     return (
       <div className='weather'>
-        <h3>{city} Weather Data 🌤️</h3>
+        <h3>{city} Weather 🌤️</h3>
         <section className='cards'>
           {weatherData.map(day =>
-            <Card key={day.date}>
-              <Card.Title>{this.displayDate(day.date)}</Card.Title>
-              <Card.Text>{day.description}</Card.Text>
-            </Card>
+            <WeatherDay day={day} displayDate={this.displayDate} key={day.date}/>
           )}
         </section>
       </div>
+    );
+  }
+}
+
+class WeatherDay extends Component {
+  render() {
+    let {day, displayDate} = this.props;
+    return (
+      <Card>
+        <Card.Title>{displayDate(day.date)}</Card.Title>
+        <Card.Text>{day.description}</Card.Text>
+      </Card>
     );
   }
 }
