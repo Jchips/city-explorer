@@ -2,7 +2,7 @@
 
 **Author**: Jelani Rhinehart
 
-**Version**: 1.2.1 (increment the patch/fix version number if you make more commits past your first submission)
+**Version**: 1.3.1 (increment the patch/fix version number if you make more commits past your first submission)
 
 ## Overview
 <!-- Provide a high level overview of what this application is and why you are building it, beyond the fact that it's an assignment for this class. (i.e. What's your problem domain?) -->
@@ -35,6 +35,7 @@ This app is built with React.js using the LocationIQ API.
 - 05-10-2023 8:31pm - Improved application UI. Shows movies with the searched city in their title name.
 Loading image appears when map is first loading.
 - 05-13-2023 4:44pm - Componetized code. Fixed error handling bug
+- 05-17-2023 10:30pm - Only shows movies that have images.
 
 ## Credit and Collaborations
 <!-- Give credit (and a link) to other people or resources that helped you build this application. -->
