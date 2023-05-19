@@ -11,9 +11,10 @@ class Movies extends Component {
         <section>
           <Carousel>
             {movieData.map((movie, index) =>
+              !movie.image_url.includes('null') && (
               <Carousel.Item key={index}>
                 <Movie movie={movie} />
-              </Carousel.Item>
+              </Carousel.Item>)
             )}
           </Carousel>
         </section>
